@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMania 2025 - Event Registration Platform</title>
+    <meta name="description" content="Register for TechMania 2025 - A comprehensive technology event featuring workshops, hackathons, and coding competitions at ANITS, Visakhapatnam.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">TechMania 2025</div>
+            <div class="navbar-menu">
+                <button class="btn btn-ghost" onclick="scrollToSection('home')">Home</button>
+                <button class="btn btn-ghost" onclick="scrollToSection('about')">About</button>
+                <button class="btn btn-ghost" onclick="scrollToSection('schedule')">Schedule</button>
+                <button class="btn btn-ghost" onclick="scrollToSection('register')">Register</button>
+                <button class="btn btn-primary btn-sm" onclick="showAdminLogin()">Admin</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section id="home" class="hero py-20">
+            <div class="max-w-7xl mx-auto px-4 text-center hero-content">
+                <h1 class="text-6xl font-extrabold mb-6">TechMania 2025</h1>
+                <div class="hero-subtitle text-xl mb-4">
+                    <span class="flex items-center justify-center">
+                        <i data-lucide="calendar" class="mr-2" style="width: 1.25rem; height: 1.25rem;"></i>
+                        September 19-20, 2025
+                    </span>
+                    <span class="flex items-center justify-center mt-2">
+                        <i data-lucide="map-pin" class="mr-2" style="width: 1.25rem; height: 1.25rem;"></i>
+                        ANITS, Visakhapatnam
+                    </span>
+                </div>
+                <p class="text-lg mb-8 max-w-2xl mx-auto text-blue-100">
+                    Join the ultimate technology event featuring workshops, hackathons, and coding competitions. 
+                    Connect with fellow developers and showcase your skills in this two-day tech extravaganza!
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button class="btn btn-warning btn-lg" onclick="scrollToSection('register')">
+                        <i data-lucide="user-plus" class="mr-2" style="width: 1rem; height: 1rem;"></i>
+                        Register Now
+                    </button>
+                    <button class="btn btn-secondary btn-lg" onclick="scrollToSection('schedule')">
+                        <i data-lucide="calendar-days" class="mr-2" style="width: 1rem; height: 1rem;"></i>
+                        View Schedule
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Event Highlights</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Experience cutting-edge technology through interactive workshops, intense competitions, and networking opportunities
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="event-card event-card-blue">
+                        <div class="event-icon icon-blue">
+                            <i data-lucide="users" class="text-white" style="width: 2rem; height: 2rem;"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Workshop</h3>
+                        <p class="text-gray-600 text-center">Interactive learning sessions with industry experts covering the latest technologies and best practices</p>
+                    </div>
+                    
+                    <div class="event-card event-card-green">
+                        <div class="event-icon icon-green">
+                            <i data-lucide="code" class="text-white" style="width: 2rem; height: 2rem;"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Hackathon</h3>
+                        <p class="text-gray-600 text-center">12-hour intense coding marathon from Day 1 6PM to Day 2 6AM. Build, innovate, and win!</p>
+                    </div>
+                    
+                    <div class="event-card event-card-amber">
+                        <div class="event-icon icon-amber">
+                            <i data-lucide="trophy" class="text-white" style="width: 2rem; height: 2rem;"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Coding Competition</h3>
+                        <p class="text-gray-600 text-center">Test your algorithmic skills in our competitive programming challenges on Day 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Event Schedule</h2>
+                    <p class="text-lg text-gray-600">Two action-packed days of technology and innovation</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Day 1 -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 icon-blue">
+                                    1
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Day 1</h3>
+                                    <p class="text-gray-600">September 19, 2025</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 rounded-full mt-2 mr-4 icon-green"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Workshop Session</p>
+                                        <div class="flex items-center text-gray-600 text-sm mt-1">
+                                            <i data-lucide="clock" class="mr-1" style="width: 0.875rem; height: 0.875rem;"></i>
+                                            Time TBD
+                                        </div>
+                                        <p class="text-sm text-gray-500 mt-1">Interactive sessions with industry experts</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 rounded-full mt-2 mr-4 icon-amber"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Hackathon Begins</p>
+                                        <div class="flex items-center text-gray-600 text-sm mt-1">
+                                            <i data-lucide="clock" class="mr-1" style="width: 0.875rem; height: 0.875rem;"></i>
+                                            6:00 PM
+                                        </div>
+                                        <p class="text-sm text-gray-500 mt-1">12-hour coding marathon starts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 2 -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 icon-green">
+                                    2
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Day 2</h3>
+                                    <p class="text-gray-600">September 20, 2025</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 rounded-full mt-2 mr-4 icon-amber"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Hackathon Ends</p>
+                                        <div class="flex items-center text-gray-600 text-sm mt-1">
+                                            <i data-lucide="clock" class="mr-1" style="width: 0.875rem; height: 0.875rem;"></i>
+                                            6:00 AM
+                                        </div>
+                                        <p class="text-sm text-gray-500 mt-1">Final submissions and presentations</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 rounded-full mt-2 mr-4" style="background-color: var(--primary-blue);"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Coding Competition</p>
+                                        <div class="flex items-center text-gray-600 text-sm mt-1">
+                                            <i data-lucide="clock" class="mr-1" style="width: 0.875rem; height: 0.875rem;"></i>
+                                            9:00 AM - 1:00 PM
+                                        </div>
+                                        <p class="text-sm text-gray-500 mt-1">Competitive programming challenges</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 rounded-full mt-2 mr-4" style="background-color: #8b5cf6;"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Valedictory Ceremony</p>
+                                        <div class="flex items-center text-gray-600 text-sm mt-1">
+                                            <i data-lucide="clock" class="mr-1" style="width: 0.875rem; height: 0.875rem;"></i>
+                                            2:00 PM - 4:00 PM
+                                        </div>
+                                        <p class="text-sm text-gray-500 mt-1">Awards ceremony and closing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="register" class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Event Registration</h2>
+                    <p class="text-lg text-gray-600">Choose your participation type and secure your spot</p>
+                </div>
+
+                <div class="text-center mb-8">
+                    <button class="btn btn-primary btn-lg" onclick="showRegistrationModal()">
+                        <i data-lucide="calendar-plus" class="mr-2" style="width: 1rem; height: 1rem;"></i>
+                        Register for TechMania 2025
+                    </button>
+                </div>
+
+                <!-- Pricing Overview -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="pricing-option">
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Hackathon Only</h3>
+                            <p class="text-gray-600 text-sm mb-3">12-hour coding marathon</p>
+                            <p class="text-2xl font-bold text-blue-600">₹159 - ₹499</p>
+                            <p class="text-xs text-gray-500 mt-1">Based on team size</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-option">
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Coding Competition</h3>
+                            <p class="text-gray-600 text-sm mb-3">4-hour competitive programming</p>
+                            <p class="text-2xl font-bold" style="color: var(--primary-green);">₹139</p>
+                            <p class="text-xs text-gray-500 mt-1">Fixed price for all team sizes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-option" style="position: relative;">
+                        <div class="best-value-badge">BEST VALUE</div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Combo Pass</h3>
+                            <p class="text-gray-600 text-sm mb-3">1 Hackathon + 2 Coding entries</p>
+                            <p class="text-2xl font-bold" style="color: var(--primary-amber);">₹249 - ₹879</p>
+                            <p class="text-xs text-gray-500 mt-1">Maximum value package</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="hidden">
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-center" style="height: 4rem;">
+                    <h1 class="text-xl font-bold">TechMania 2025 - Admin Dashboard</h1>
+                    <button class="btn btn-danger btn-sm" onclick="adminLogout()">
+                        <i data-lucide="log-out" class="mr-2" style="width: 0.875rem; height: 0.875rem;"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <!-- Dashboard Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="stat-card">
+                    <div class="flex items-center">
+                        <div class="stat-icon" style="background-color: var(--primary-blue);">
+                            <i data-lucide="users" class="text-white" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <p class="stat-label">Total Registrations</p>
+                            <p id="totalRegistrations" class="stat-value">0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="flex items-center">
+                        <div class="stat-icon" style="background-color: var(--primary-amber);">
+                            <i data-lucide="code" class="text-white" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <p class="stat-label">Hackathon</p>
+                            <p id="hackathonCount" class="stat-value">0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="flex items-center">
+                        <div class="stat-icon" style="background-color: var(--primary-green);">
+                            <i data-lucide="trophy" class="text-white" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <p class="stat-label">Coding Competition</p>
+                            <p id="codingCount" class="stat-value">0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="flex items-center">
+                        <div class="stat-icon" style="background-color: #8b5cf6;">
+                            <i data-lucide="star" class="text-white" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <p class="stat-label">Combo Pass</p>
+                            <p id="comboCount" class="stat-value">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registrations Table -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <h2 class="card-title">Registration Data</h2>
+                        <div class="flex gap-4">
+                            <select id="eventTypeFilter" class="form-control" style="width: auto;" onchange="filterRegistrations()">
+                                <option value="">All Events</option>
+                                <option value="hackathon">Hackathon</option>
+                                <option value="coding">Coding Competition</option>
+                                <option value="combo">Combo Pass</option>
+                            </select>
+                            <button class="btn btn-success" onclick="exportToCSV()">
+                                <i data-lucide="download" class="mr-2" style="width: 0.875rem; height: 0.875rem;"></i>
+                                Export CSV
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Team Name</th>
+                                    <th>Event Type</th>
+                                    <th>Team Size</th>
+                                    <th>Team Lead</th>
+                                    <th>Mobile</th>
+                                    <th>Transaction ID</th>
+                                    <th>Fee</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="registrationsTableBody">
+                                <tr>
+                                    <td colspan="8" class="text-center py-8 text-gray-500">
+                                        No registrations found
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal-backdrop hidden" onclick="closeRegistrationModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Event Registration</h2>
+                    <p class="text-gray-600">Fill in your details to register for TechMania 2025</p>
+                </div>
+            </div>
+            
+            <form id="registrationForm" class="modal-body space-y-6" onsubmit="handleRegistrationSubmit(event)">
+                <!-- Event Type Selection -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Select Event Type</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="space-y-3">
+                            <label class="pricing-option" onclick="selectEventType('hackathon')">
+                                <input type="radio" name="eventType" value="hackathon">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="font-semibold">Hackathon Only</p>
+                                        <p class="text-sm text-gray-600">12-hour coding marathon</p>
+                                    </div>
+                                    <span class="text-xl font-bold text-blue-600">₹159 - ₹499</span>
+                                </div>
+                            </label>
+                            
+                            <label class="pricing-option" onclick="selectEventType('coding')">
+                                <input type="radio" name="eventType" value="coding">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="font-semibold">Coding Competition Only</p>
+                                        <p class="text-sm text-gray-600">4-hour competitive programming</p>
+                                    </div>
+                                    <span class="text-xl font-bold" style="color: var(--primary-green);">₹139</span>
+                                </div>
+                            </label>
+                            
+                            <label class="pricing-option selected" onclick="selectEventType('combo')">
+                                <input type="radio" name="eventType" value="combo" checked>
+                                <div class="best-value-badge">BEST VALUE</div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="font-semibold">Combo Pass</p>
+                                        <p class="text-sm text-gray-600">1 Hackathon + 2 Coding Competition entries</p>
+                                    </div>
+                                    <span class="text-xl font-bold" style="color: var(--primary-amber);">₹249 - ₹879</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Size Selection -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Team Size</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="team-size-grid">
+                            <button type="button" class="team-size-btn" onclick="selectTeamSize(1)">1</button>
+                            <button type="button" class="team-size-btn selected" onclick="selectTeamSize(2)">2</button>
+                            <button type="button" class="team-size-btn" onclick="selectTeamSize(3)">3</button>
+                            <button type="button" class="team-size-btn" onclick="selectTeamSize(4)">4</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Display -->
+                <div class="pricing-display">
+                    <h3 class="text-lg font-semibold mb-2">Registration Fee</h3>
+                    <div id="currentPrice" class="pricing-amount">₹479</div>
+                    <p class="text-sm opacity-90">Final amount to be paid</p>
+                </div>
+
+                <!-- Team Details -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Team Details</h3>
+                    </div>
+                    <div class="card-body space-y-4">
+                        <div class="form-group">
+                            <label class="form-label" for="teamName">Team Name *</label>
+                            <input type="text" id="teamName" name="teamName" class="form-control" placeholder="Enter your team name" required>
+                        </div>
+
+                        <div id="teamMembersContainer">
+                            <div class="form-group">
+                                <label class="form-label" for="member1">Team Lead (Member 1) *</label>
+                                <input type="text" id="member1" name="member1" class="form-control" placeholder="Full name of team lead" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="member2">Member 2 *</label>
+                                <input type="text" id="member2" name="member2" class="form-control" placeholder="Full name of member 2" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mobileNumber">Team Lead Mobile Number *</label>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" class="form-control" placeholder="10-digit mobile number" maxlength="10" required>
+                            <div class="form-help">Enter a valid 10-digit mobile number</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Payment</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-6">
+                            <div class="qr-placeholder">
+                                <i data-lucide="qr-code" style="width: 3rem; height: 3rem; color: var(--gray-400); margin-bottom: 0.5rem;"></i>
+                                <p class="text-sm font-medium text-gray-600">Scan QR Code to Pay</p>
+                                <p class="text-xs text-gray-500">UPI: techmania2025@paytm</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <p class="font-semibold text-gray-800">Payment Instructions:</p>
+                                <p class="text-sm text-gray-600 mt-2">1. Scan the QR code above or use UPI ID: techmania2025@paytm</p>
+                                <p class="text-sm text-gray-600">2. Pay the exact amount shown</p>
+                                <p class="text-sm text-gray-600">3. Enter the transaction ID below</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="transactionId">Transaction ID *</label>
+                            <input type="text" id="transactionId" name="transactionId" class="form-control" placeholder="Enter transaction ID after payment" required>
+                            <div class="form-help">Enter the transaction ID you received after making the payment</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="flex gap-4">
+                        <button type="button" class="btn btn-outline flex-1" onclick="closeRegistrationModal()">
+                            Cancel
+                        </button>
+                        <button type="submit" id="submitRegistration" class="btn btn-primary flex-1">
+                            Complete Registration
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="modal-backdrop hidden" onclick="closeAdminLoginModal(event)">
+        <div class="modal-content" style="max-width: 28rem;" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Admin Login</h2>
+                    <p class="text-gray-600">Enter your credentials to access the dashboard</p>
+                </div>
+            </div>
+            
+            <form id="adminLoginForm" class="modal-body space-y-4" onsubmit="handleAdminLogin(event)">
+                <div class="form-group">
+                    <label class="form-label" for="adminUsername">Username</label>
+                    <input type="text" id="adminUsername" name="username" class="form-control" placeholder="Enter admin username" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="adminPassword">Password</label>
+                    <div style="position: relative;">
+                        <input type="password" id="adminPassword" name="password" class="form-control" placeholder="Enter admin password" required>
+                        <button type="button" onclick="togglePasswordVisibility()" style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+                            <i id="passwordToggleIcon" data-lucide="eye" style="width: 1rem; height: 1rem;"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <p class="text-sm font-medium text-blue-800">Default Credentials:</p>
+                    <p class="text-sm text-blue-700">Username: <code class="bg-blue-100 px-1 rounded">admin</code></p>
+                    <p class="text-sm text-blue-700">Password: <code class="bg-blue-100 px-1 rounded">admin123</code></p>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="flex gap-4">
+                        <button type="button" class="btn btn-outline flex-1" onclick="closeAdminLoginModal()">
+                            Cancel
+                        </button>
+                        <button type="submit" id="adminLoginButton" class="btn btn-primary flex-1">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
